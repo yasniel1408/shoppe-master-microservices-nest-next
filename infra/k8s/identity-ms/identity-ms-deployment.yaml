@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: identity-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: identity-ms
+  template:
+    metadata:
+      labels:
+        app: identity-ms
+    spec:
+      # automountServiceAccountToken: false
+      containers:
+        - name: identity-ms
+          image: "yasniel1408/identity-ms:latest"
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "800m"
+          # env:
+          #   - name: JWT_KEY # esta configuaracion de aca es para que tome los valores que hay del secret en el cluster y los tome como variable de entorno dentro del contenedor
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: jwt-secret
+          #         key: JWT_KEY
