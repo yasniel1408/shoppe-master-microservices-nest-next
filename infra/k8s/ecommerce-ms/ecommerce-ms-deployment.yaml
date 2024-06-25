@@ -12,7 +12,7 @@ spec:
       labels:
         app: ecommerce-ms
     spec:
-      #automountServiceAccountToken: false
+      automountServiceAccountToken: false
       containers:
         - name: ecommerce-ms
           image: "yasniel1408/ecommerce-ms:latest"

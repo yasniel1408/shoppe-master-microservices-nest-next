@@ -12,7 +12,7 @@ spec:
       labels:
         app: payment-ms
     spec:
-      # automountServiceAccountToken: false
+      automountServiceAccountToken: false
       containers:
         - name: payment-ms
           image: "yasniel1408/payment-ms:latest"

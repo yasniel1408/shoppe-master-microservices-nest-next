@@ -12,7 +12,7 @@ spec:
       labels:
         app: inventory-ms
     spec:
-      # automountServiceAccountToken: false
+      automountServiceAccountToken: false
       containers:
         - name: inventory-ms
           image: "yasniel1408/inventory-ms:latest"

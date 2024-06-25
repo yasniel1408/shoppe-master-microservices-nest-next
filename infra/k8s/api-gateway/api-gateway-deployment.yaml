@@ -12,17 +12,17 @@ spec:
       labels:
         app: api-gateway
     spec:
-      # automountServiceAccountToken: false
+      automountServiceAccountToken: false
       containers:
         - name: api-gateway
           image: "yasniel1408/api-gateway:latest"
           resources:
             requests:
               memory: "64Mi"
-              cpu: "250m"
+              cpu: "1"
             limits:
-              memory: "512Mi"
-              cpu: "800m"
+              memory: "256Mi"
+              cpu: "3"
           # env:
           #   - name: JWT_KEY # esta configuaracion de aca es para que tome los valores que hay del secret en el cluster y los tome como variable de entorno dentro del contenedor
           #     valueFrom:

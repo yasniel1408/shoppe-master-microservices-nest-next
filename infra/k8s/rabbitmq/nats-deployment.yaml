@@ -12,7 +12,7 @@ spec:
       labels:
         app: rabbitmq
     spec:
-      # automountServiceAccountToken: false
+      automountServiceAccountToken: false
       containers:
         - name: rabbitmq
           image: "rabbitmq:latest"

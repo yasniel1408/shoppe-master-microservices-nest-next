@@ -12,7 +12,7 @@ spec:
       labels:
         app: web-app
     spec:
-      # automountServiceAccountToken: false
+      automountServiceAccountToken: false
       containers:
         - name: web-app
           image: "yasniel1408/web-app:latest"
