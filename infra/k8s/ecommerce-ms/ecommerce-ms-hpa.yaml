@@ -23,9 +23,15 @@ spec:
           type: Utilization
           averageUtilization: 50
   behavior:
-    scaleDown:
-      stabilizationWindowSeconds: 300
+    scaleUp:
+      stabilizationWindowSeconds: 60  # 1 minuto para estabilización
       policies:
         - type: Percent
           value: 100
-          periodSeconds: 60
+          periodSeconds: 30  # Evaluar cada 30 segundos para escalar hacia arriba
+    scaleDown:
+      stabilizationWindowSeconds: 300  # 5 minutos para estabilización
+      policies:
+        - type: Percent
+          value: 100
+          periodSeconds: 60  # Evaluar cada 60 segundos para escalar hacia abajo

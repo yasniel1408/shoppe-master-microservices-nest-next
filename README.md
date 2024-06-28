@@ -18,3 +18,19 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 for i in {1..100}; do wget -q -O- http://shoppe-api.org/v1 > /dev/null; echo "Solicitud $i enviada"; done
 
 for i in {1..100}; do wget -q -O- http://shoppe-api.org/v1; done
+
+# Install Nest
+
+## Instalaciones para todos los micros Base
+
+```
+npm i @nestjs/microservices class-transformer class-validator
+
+```
+
+## Instalaciones para base de datos postges
+
+```
+npm i @nestjs/typeorm typeorm
+
+```
