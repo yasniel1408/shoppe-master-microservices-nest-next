@@ -18,11 +18,11 @@ spec:
           image: "yasniel1408/api-gateway:latest"
           resources:
             requests:
-              memory: "64Mi"
-              cpu: "1"
+              memory: "512Mi"
+              cpu: "100m"
             limits:
-              memory: "256Mi"
-              cpu: "3"
+              memory: "512Mi"
+              cpu: "1"
           # env:
           #   - name: JWT_KEY # esta configuaracion de aca es para que tome los valores que hay del secret en el cluster y los tome como variable de entorno dentro del contenedor
           #     valueFrom:
