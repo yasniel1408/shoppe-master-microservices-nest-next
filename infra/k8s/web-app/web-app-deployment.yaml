@@ -18,10 +18,10 @@ spec:
           image: "yasniel1408/web-app:latest"
           resources:
             requests:
-              memory: "512Mi"
+              memory: "800Mi"
               cpu: "500m"
             limits:
-              memory: "600Mi"
+              memory: "800Mi"
               cpu: "1"
           # env:
           #   - name: JWT_KEY # esta configuaracion de aca es para que tome los valores que hay del secret en el cluster y los tome como variable de entorno dentro del contenedor
