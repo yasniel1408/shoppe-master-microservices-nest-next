@@ -24,7 +24,7 @@ for i in {1..100}; do wget -q -O- http://shoppe-api.org/v1; done
 ## Instalaciones para todos los micros Base
 
 ```
-npm i @nestjs/microservices class-transformer class-validator
+npm i @nestjs/microservices class-transformer class-validator @nestjs/config
 
 ```
 
@@ -33,4 +33,28 @@ npm i @nestjs/microservices class-transformer class-validator
 ```
 npm i @nestjs/typeorm typeorm
 
+```
+
+## Instalaciones RabbitMQ
+
+```
+npm i amqplib amqp-connection-manager
+```
+
+## Instalaciones Mongo
+
+```
+npm i @nestjs/mongoose mongoose
+```
+
+## Instalaciones TypeORM con mysql
+
+```
+npm install --save @nestjs/typeorm typeorm mysql2
+```
+
+## Instalaciones TypeORM con postgres
+
+```
+npm install --save @nestjs/typeorm typeorm pg
 ```

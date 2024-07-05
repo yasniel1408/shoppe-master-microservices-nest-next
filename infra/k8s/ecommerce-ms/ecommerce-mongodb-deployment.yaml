@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-mongodb-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce-mongodb
+  template:
+    metadata:
+      labels:
+        app: ecommerce-mongodb
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: ecommerce-mongodb
+          image: "mongo:latest"
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "800m"
