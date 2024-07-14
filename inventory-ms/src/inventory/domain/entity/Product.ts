@@ -4,7 +4,7 @@ import { CurrencyType } from '../vo/currency-type.enum';
 import { PriceVo } from '../vo/price.vo';
 import { ResourceTypeVo } from '../vo/resource-type.vo';
 import { Category } from './Category';
-import { Store } from './Store';
+import { StoreAggregate } from './Store.aggregate';
 
 export class Product {
   constructor(
@@ -15,7 +15,7 @@ export class Product {
     private resources: ResourceTypeVo[],
     private description: string,
     private categories: Category[],
-    private store: Store,
+    private store: StoreAggregate,
     private readonly createdAt: Date,
     private updatedAt: Date,
     private version: number = 0,
@@ -55,7 +55,7 @@ export class Product {
     return this.categories;
   }
 
-  getStore(): Store {
+  getStore(): StoreAggregate {
     return this.store;
   }
 
@@ -95,7 +95,7 @@ export class Product {
     this.increaseVersion();
   }
 
-  moveToOtherStore(store: Store): void {
+  moveToOtherStore(store: StoreAggregate): void {
     this.store = store;
     this.increaseVersion();
   }

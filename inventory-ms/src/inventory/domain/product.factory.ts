@@ -1,6 +1,6 @@
 import { Category } from './entity/Category';
 import { Product } from './entity/Product';
-import { Store } from './entity/Store';
+import { StoreAggregate } from './entity/Store.aggregate';
 import { ProductBuilder } from './product.builder';
 import { PriceVo } from './vo/price.vo';
 import { ResourceTypeVo } from './vo/resource-type.vo';
@@ -14,7 +14,7 @@ export class ProductFactory {
     resources: ResourceTypeVo[],
     description: string,
     categories: Category[],
-    store: Store,
+    store: StoreAggregate,
     createdAt: Date,
     updatedAt: Date,
     version: number = 0,
@@ -44,7 +44,7 @@ export class ProductFactory {
       resources: ResourceTypeVo[];
       description: string;
       categories: Category[];
-      store: Store;
+      store: StoreAggregate;
       createdAt: Date;
       updatedAt: Date;
       version?: number;

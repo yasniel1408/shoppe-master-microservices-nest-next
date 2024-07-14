@@ -1,4 +1,4 @@
-import { LongitudeError } from '../errors/Longitude.error';
+import { LongitudeError } from '../errors/longitude.error';
 import { LatitudeError } from '../errors/latitude.error';
 
 export class LocationVo {

@@ -2,7 +2,7 @@ import { LocationVo } from '../vo/location.vo';
 import { Category } from './Category';
 import { Product } from './Product';
 
-export class Store {
+export class StoreAggregate {
   constructor(
     private readonly id: number,
     private name: string,

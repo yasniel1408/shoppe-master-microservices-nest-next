@@ -1,5 +1,5 @@
 import { Category } from '../entity/Category';
-import { Store } from '../entity/Store';
+import { StoreAggregate } from '../entity/Store.aggregate';
 import { PriceVo } from '../vo/price.vo';
 import { ResourceTypeVo } from '../vo/resource-type.vo';
 
@@ -14,7 +14,7 @@ export class ProductCreated {
     private resources: ResourceTypeVo[],
     private readonly description: string,
     private readonly category: Category,
-    private readonly store: Store,
+    private readonly store: StoreAggregate,
     private readonly createdAt: Date,
     private readonly updatedAt: Date,
   ) {}
